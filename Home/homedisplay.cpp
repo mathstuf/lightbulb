@@ -20,14 +20,13 @@ HomeDisplay::HomeDisplay(QWidget *parent)
     ui->helpVideo->setVisible(false);
 
     //Configure our time object
-    time = new QDateTime();
-    time->currentDateTime();
+    QDateTime time = QDateTime::currentDateTime();
 
     //Set up the dateLabel
-    ui->dateLabel->setText(time->toString("dddd MMMM d"));
-    qDebug() << time->toString("hh:mm");
+    ui->dateLabel->setText(time.toString("dddd MMMM d"));
+    qDebug() << time.toString("hh:mm");
     //Set up the time label
-    ui->timeLabel->setText(time->toString("hh:mm"));
+    ui->timeLabel->setText(time.toString("hh:mm"));
 
     //SIGNALS
     //This will be triggered when the user presses "help" on the screen

@@ -2,7 +2,6 @@
 #define HOMEDISPLAY_H
 
 #include <QtGui/QWidget>
-#include <QDateTime>
 
 namespace Ui
 {
@@ -27,7 +26,6 @@ public:
 
 private:
     Ui::HomeDisplay *ui;
-    QDateTime *time;
 };
 
 #endif // HOMEDISPLAY_H
